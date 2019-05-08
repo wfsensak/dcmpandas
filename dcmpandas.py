@@ -106,7 +106,7 @@ def scrape(directory = '.',
                 continue
             
             if verbose:
-                print 'Processing', f
+                print('Processing', f)
             try:
                 ds = dicom.read_file(f,defer_size='10KB')
                 h = {}
