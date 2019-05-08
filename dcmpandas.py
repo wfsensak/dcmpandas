@@ -71,7 +71,7 @@ def view(filenames):
     os.system(viewer + ' ' + ' '.join(filenames) + '&')
 
 def scrape(directory = '.',
-           database_file='dicom.pickle',
+           database_file='pydicom.pickle',
            glob_pattern = '*',
            verbose=1,
            guess_convert = True,
