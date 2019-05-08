@@ -66,16 +66,6 @@ import numpy as np
 # Default viewer is giv. See github.com/dov/giv .
 viewer = 'giv'
 
-def is_dicom(filename):
-    try:
-        fh = open(filename)
-        fh.seek(0x80)
-        if fh.read(4) != 'DICM':
-            return False
-        return True
-    except:
-        return False
-    
 def view(filenames):
     """View the filenames with an external viewer"""
     os.system(viewer + ' ' + ' '.join(filenames) + '&')
@@ -103,7 +93,7 @@ def scrape(directory = '.',
             continue
         for fn in fnmatch.filter(filenames, glob_pattern):
             f = os.path.join(root, fn)
-            if not is_dicom(f):
+            if not pydicom.is_dicom(f):
                 print('Not DICOM', f)
                 continue
             
