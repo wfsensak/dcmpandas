@@ -93,7 +93,7 @@ def scrape(directory = '.',
             continue
         for fn in fnmatch.filter(filenames, glob_pattern):
             f = os.path.join(root, fn)
-            if not pydicom.is_dicom(f):
+            if not pydicom.misc.is_dicom(f):
                 print('Not DICOM', f)
                 continue
             
