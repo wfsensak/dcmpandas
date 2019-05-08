@@ -100,7 +100,7 @@ def scrape(directory = '.',
             if verbose:
                 print('Processing', f)
             try:
-                ds = dicom.read_file(f,defer_size='10KB')
+                ds = pydicom.read_file(f)
                 h = {}
                 h['Filename'] = f
                 for k in ds.keys():
