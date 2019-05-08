@@ -100,13 +100,14 @@ def scrape(directory = '.',
             if verbose:
                 print('Processing', f)
             try:
-                ds = pydicom.read_file(f)
+                ds = pydicom.read_file(f,None,True)
                 h = {}
                 h['Filename'] = f
                 for k in ds.keys():
+                    print(k)
                     # Skip images
-                    if (k.group,k.elem) == (0x7fe0,0x0010):
-                        continue
+                    #if (k.group,k.elem) == (0x7fe0,0x0010):
+                    #    continue
                     v = ds[k]
                     key = (v.name
                            .replace(' ','')
