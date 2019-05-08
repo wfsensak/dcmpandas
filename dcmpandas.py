@@ -165,7 +165,7 @@ def scrape(directory = '.',
     #    print(database_file)
     #    pickle.dump([tags, df],open(database_file,'wb'))
     #else:
-        return tags,df
+    return tags,df
 
 if __name__=='__main__':
     pass
