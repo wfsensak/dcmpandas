@@ -150,12 +150,12 @@ def scrape(directory = '.',
                                  v.VR)
                 db += [h]
                 if verbose: 
-                    print ' Successful', h['Filename']
+                    print(' Successful', h['Filename'])
             except Exception as e:
                 failed_placeholder = {'AccessionNumber': ds.AccessionNumber,  'Filename': h['Filename'], 'ReadError': e} # collect 
                 db.append(failed_placeholder)
                 if verbose:
-                    print ' Failed    ', h['Filename'], e
+                    print(' Failed    ', h['Filename'], e)
 
     # Create a dataset of everything
     if sort_slice_location:
