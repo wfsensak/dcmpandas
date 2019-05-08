@@ -103,6 +103,7 @@ def scrape(directory = '.',
             continue
         for fn in fnmatch.filter(filenames, glob_pattern):
             f = os.path.join(root, fn)
+            print('Testing', f)
             if not is_dicom(f):
                 continue
             
