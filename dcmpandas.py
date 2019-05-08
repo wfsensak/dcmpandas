@@ -160,6 +160,7 @@ def scrape(directory = '.',
     tags =  pd.DataFrame(tags,index=['Group','Element','Tag','VR'])
 
     # Save to disk
+    database_file
     if database_file is not None:
         pickle.dump([tags, df],open(database_file,'wb'))
     else:
