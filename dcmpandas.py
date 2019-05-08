@@ -97,7 +97,7 @@ def scrape(directory = '.',
     tags = {}
     for root, dirnames, filenames in os.walk(directory):
         if verbose:
-            print 'Visiting   ' + root
+            print('Visiting   ' + root)
         if root != directory and not recursive:
             continue
         for fn in fnmatch.filter(filenames, glob_pattern):
