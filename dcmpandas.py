@@ -61,6 +61,7 @@ import pydicom
 import pandas as pd
 import pickle
 import fnmatch
+import numpy as np
 
 # Default viewer is giv. See github.com/dov/giv .
 viewer = 'giv'
