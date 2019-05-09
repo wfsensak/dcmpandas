@@ -118,8 +118,8 @@ def scrape(directory = '.',
                            .replace(')','')
                            .replace('-','')
                            )
-                    print(k)
-                    print(key)
+                    #print(k)
+                    #print(key)
                     # TBD - interpret VR and act accordingly
                     value = str(v.value)
 
