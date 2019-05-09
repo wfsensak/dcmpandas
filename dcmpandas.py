@@ -116,6 +116,7 @@ def scrape(directory = '.',
                            .replace(']','')
                            .replace('(','')
                            .replace(')','')
+                           .replace('-','')
                            )
                     print(k)
                     print(key)
