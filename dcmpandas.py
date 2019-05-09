@@ -104,7 +104,6 @@ def scrape(directory = '.',
                 h = {}
                 h['Filename'] = f
                 for k in ds.keys():
-                    print(k)
                     # Skip images
                     #if (k.group,k.elem) == (0x7fe0,0x0010):
                     #    continue
@@ -118,6 +117,8 @@ def scrape(directory = '.',
                            .replace('(','')
                            .replace(')','')
                            )
+                    print(k)
+                    print(key)
                     # TBD - interpret VR and act accordingly
                     value = str(v.value)
 
